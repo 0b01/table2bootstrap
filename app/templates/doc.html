@@ -1,0 +1,23 @@
+<h1><a id="table2bootstrap_0"></a>table2bootstrap</h1>
+<p>Maintained by Ricky Han. <a href="mailto:rhan@nxtstp.com">rhan@nxtstp.com</a> This tool converts old school table based layout to bootstrap responsive layout.</p>
+<hr>
+<h1><a id="Steps_6"></a>Steps:</h1>
+<ol>
+<li>log in</li>
+<li>use "Organize Parts" tool to allow dragging and dropping components.</li>
+<li>rearrange if necessary ( see <code>Creating n2:DroppableZone</code> )</li>
+<li>most Generic Textboxes are table-based and the primary target of conversion.</li>
+<li>click edit part; html on the upper right corner; determine if the code is &lt;table&gt;; if so, copy and paste to the converter.</li>
+<li>If the <code>edit part</code> doesnt show up. The component is most likely a custom part in the Parts folder (see <code>Editing parts</code>)</li>
+<li>copy the converted markup back to the dialog box.</li>
+</ol>
+<h1><a id="Postconversion_15"></a>Post-conversion:</h1>
+<p>each column of the table has two classes to determine the column width. One for mobile (xs) and one for desktop (sm). Column numbers add up to 12. If you want the column to be full width on mobile, change xs to 12. For desktops, adjust as needed.</p>
+<p>For building complex interfaces, this tool will serve as a starting point and make your job significantly easier.</p>
+<h1><a id="Creating_n2DroppableZone_21"></a>Creating n2:DroppableZone</h1>
+<p>These are anchors for dragging and dropping components. Change the layout files (/Templates/UI/Layouts/) and add corresponding definitions in designer.cs files.</p>
+<h1><a id="Editing_Parts_25"></a>Editing Parts</h1>
+<p>Some parts are table based. Convert those accordingly. Then change the definitions based on id in designer file from HtmlTable to HtmlGenericControl(beware of camel case)</p>
+
+<h1>Setting up tool</h1>
+<p> Chances are, if you are reading this, you've already set it up. This is a simple self-contained flask application that can be deployed on any server, local or remote. Just run sudo ./run.py and you are all set. Dependencies are flask, cssutils and bs4.</p>
