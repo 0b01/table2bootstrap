@@ -36,7 +36,7 @@ $(document).ready(function(){
         var form = $("#table").val();
         $.ajax({
             type: "POST",
-            url: "http://localhost:60000/result",
+            url: "http://localhost:3000/result",
             data: form,
             success: function (data) {
               var converted = data['converted'];

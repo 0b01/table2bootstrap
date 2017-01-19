@@ -67,7 +67,7 @@ def toBootstrap(form):
        empty = soup.find(lambda tag: tag.name in ['p','div','span'] and tag.find(True) is None and (tag.string is None or tag.string.strip()==""))
        if not empty:
            break
-       print empty
+       print (empty)
        empty.extract()
     for tag in soup():
         del tag['align']
